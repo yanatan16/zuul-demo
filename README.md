@@ -1,7 +1,7 @@
 zuul-demo
 =========
 
-A demo for node's zuul test runner. Made for a javascript meetup presentation.
+A demo for node's [zuul](/defunctzombie/zuul) test runner. Made for a javascript meetup presentation.
 
 ## 1: Local Testing
 
