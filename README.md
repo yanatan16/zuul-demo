@@ -52,3 +52,15 @@ zuul -- test/index.js
 ```
 git push
 ```
+
+# Slides
+
+[zuul-demo.slide](slides/zuul-demo.slide) were made with the [go-present](https://code.google.com/p/go.tools/present) tool.
+
+```
+go get code.google.com/p/go.tools/cmd/present
+cd zuul-demo
+$GOPATH/bin/present
+```
+
+And open to [http://127.0.0.1:3999/slides/zuul-demo.slide](http://127.0.0.1:3999/slides/zuul-demo.slide).
