@@ -4,7 +4,7 @@
   "description": "A demo for zuul",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --ui tdd test/index.js && zuul --local 8123 -- test/index.js"
+    "test": "mocha test/index.js && zuul -- test/index.js"
   },
   "repository": {
     "type": "git",
@@ -23,10 +23,13 @@
   },
   "homepage": "https://github.com/yanatan16/zuul-demo",
   "devDependencies": {
+    "express": "^4.4.4",
     "mocha": "^1.20.1",
+    "request": "^2.36.0",
     "zuul": "^1.7.0"
   },
   "dependencies": {
-    "foreach": "^2.0.4"
+    "foreach": "^2.0.4",
+    "xhr-browserify": "0.0.1"
   }
 }

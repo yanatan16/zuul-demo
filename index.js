@@ -2,6 +2,7 @@
 // Provide some functions for testing
 var http = require('https')
   , foreach = require('foreach')
+  , is_browser = !!global.document
 
 // Returns "hello world"
 exports.hello_world = function () {
@@ -25,8 +26,12 @@ exports.fail = function () {
 }
 
 // Queries timeapi.org for the current UTC time
+var base_url = 'https://www.federalregister.gov/api/v1/articles/%(doc_number).json'
+if (is_browser)
+  base_url = '/document/%(doc_number)' // Go through a localtunnel server
+
 exports.get_federal_document = function (doc_number, callback) {
-  var url = 'https://www.federalregister.gov/api/v1/articles/%(doc_number).json'.replace('%(doc_number)', doc_number)
+  var url = base_url.replace('%(doc_number)', doc_number)
 
   getJsonUrl(url, callback)
 }
