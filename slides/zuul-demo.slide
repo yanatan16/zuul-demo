@@ -67,3 +67,5 @@ And ensure your `npm test` command is right:
 And just push some code!
 
 .play git_push.sh /^[^#]/,/^$/
+
+Then we go to the [[http://travis-ci.org/yanatan16/zuul-demo][zuul-demo testing page]].
