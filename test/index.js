@@ -1,3 +1,4 @@
+// START OMIT
 // zuul-demo/test/index.js
 // Test the functions in zuul-demo/index.js
 // mocha/tdd style tests
@@ -7,9 +8,13 @@ var demo = require('../index')
   , foreach = require('foreach')
 
 suite('Zuul Demo')
+
 test('hello world', function () {
   assert.equal(demo.hello_world(), 'hello world')
 })
+
+// ... theres more
+// END OMIT
 
 test('fibonacci numbers 1-10', function () {
   var real_fibs = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]

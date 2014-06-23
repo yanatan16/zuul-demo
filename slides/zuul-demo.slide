@@ -1,0 +1,69 @@
+Zuul Demo
+From Node to Cross-Browser Testing
+25 Jun 2014
+Tags: node, zuul, cross-browser, sauce-labs, travis-ci
+
+Jon Eisen
+Code Typist, Rafflecopter
+jon@joneisen.me
+http://joneisen.me/
+@jm_eisen
+
+* 4 Steps
+
+.link https://github.com/defunctzombie/zuul defunctzombie/zuul
+
+- Local Testing
+    mocha
+- Browser Testing
+    mocha+zuul
+- Cloud Browser Testing
+    mocha+zuul+sauce-labs
+- CI Cloud Testing
+    mocha+zuul+sauce-labs+travis-ci
+
+* Local Testing
+
+Let's check out the [[https://github.com/yanatan16/zuul-demo/tree/local-tests][code]]!
+
+.code ../test/index.js /START OMIT/,/END OMIT/
+
+Run the node tests!
+
+.play local_test.sh /^[^#]/
+
+* Browser Testing
+
+We need a server at the same domain as the static files, so we can create a [[https://github.com/yanatan16/zuul-demo/blob/browser-tests/test/test_server.js][test_server.js]]. Then, we add in a [[https://github.com/yanatan16/zuul-demo/blob/browser-tests/.zuul.yml][.zuul.yml]]. [[https://github.com/yanatan16/zuul-demo/compare/local-tests...browser-tests][Full Diff]]
+
+.code ../.zuul.yml /ui/,/server/
+
+Run the local browser test!
+
+.play browser_test.sh /^[^#]/
+
+.iframe http://localhost:8123/__zuul 150 400
+
+* Cloud Testing
+
+You'll have to setup a `.zuulrc` file with your [[saucelabs.com][Sauce Labs]] credentials, and add browser definition to your `.zuul.yml`:
+
+.code ../.zuul.yml /browser/,/^$/
+
+Run the cloud browser tests!
+
+.play cloud_test.sh /^[^#]/
+
+* Setting up CI
+
+[[https://travis-ci.org][Travis CI]] is amazing! We just turn it on and add an `.travis.yml`:
+
+.code ../.travis.yml
+
+And ensure your `npm test` command is right:
+
+.code ../package.json /scripts/,/\}/
+
+And just push some code!
+
+.play git_push.sh /^[^#]/,/^$/
