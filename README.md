@@ -5,10 +5,10 @@ A demo for node's [zuul](/defunctzombie/zuul) test runner. Made for a javascript
 
 ## 1: Local Testing
 
-[`local-tests` branch](/yanatan16/zuul-demo/tree/local-tests)
+[`local-tests` branch](https://github.com/yanatan16/zuul-demo/tree/local-tests)
 
-- [implementation](/yanatan16/zuul-demo/blob/master/index.js)
-- [tests](/yanatan16/zuul-demo/blob/master/test/index.js)
+- [implementation](index.js)
+- [tests](test/index.js)
 
 ```
 mocha test/index.js
@@ -16,12 +16,12 @@ mocha test/index.js
 
 ## 2: Browser Testing
 
-[`browser-tests` branch](/yanatan16/zuul-demo/tree/browser-tests)
+[`browser-tests` branch](https://github.com/yanatan16/zuul-demo/tree/browser-tests)
 
-[diff with `local-tests`](/yanatan16/zuul-demo/compare/local-tests...browser-tests)
+[diff with `local-tests`](https://github.com/yanatan16/zuul-demo/compare/local-tests...browser-tests)
 
-- [.zuul.yml](/yanatan16/zuul-demo/blob/master/.zuul.yml)
-- [test_server.js](/yanatan16/zuul-demo/blob/master/test/test_server.js)
+- [.zuul.yml](.zuul.yml)
+- [test_server.js](test/test_server.js)
 
 ```
 zuul --local 8123 -- test/index.js
@@ -29,11 +29,11 @@ zuul --local 8123 -- test/index.js
 
 ## 3: Cloud Testing
 
-[`cloud-tests` branch](/yanatan16/zuul-demo/tree/cloud-tests)
+[`cloud-tests` branch](https://github.com/yanatan16/zuul-demo/tree/cloud-tests)
 
-[diff with `browser-tests`](/yanatan16/zuul-demo/compare/browser-tests...cloud-tests)
+[diff with `browser-tests`](https://github.com/yanatan16/zuul-demo/compare/browser-tests...cloud-tests)
 
-- [.zuul.yml](/yanatan16/zuul-demo/blob/master/.zuul.yml)
+- [.zuul.yml](.zuul.yml)
 
 ```
 zuul -- test/index.js
@@ -41,13 +41,13 @@ zuul -- test/index.js
 
 ## 4: Travis-CI
 
-[`master` branch](/yanatan16/zuul-demo/tree/master)
+[`master` branch](https://github.com/yanatan16/zuul-demo/tree/master)
 
-[diff with `cloud-tests`](/yanatan16/zuul-demo/compare/cloud-tests...master)
+[diff with `cloud-tests`](https://github.com/yanatan16/zuul-demo/compare/cloud-tests...master)
 
-- [.travis.yml](/yanatan16/zuul-demo/blob/master/.travis.yml)
-- [package.json](/yanatan16/zuul-demo/blob/master/package.json)
-- [Travis CI](travis-ci.org)
+- [.travis.yml](.travis.yml)
+- [package.json](package.json)
+- [Travis CI](http://travis-ci.org)
 
 ```
 git push
