@@ -56,7 +56,7 @@ Run the cloud browser tests!
 
 * Setting up CI
 
-[[https://travis-ci.org][Travis CI]] is amazing! We just turn it on and add an `.travis.yml`:
+[[https://travis-ci.org][Travis CI]] is amazing! We just turn it on and add a `.travis.yml`:
 
 .code ../.travis.yml
 
