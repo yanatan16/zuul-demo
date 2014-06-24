@@ -41,9 +41,9 @@ zuul -- test/index.js
 
 ## 4: Travis-CI
 
-[`master` branch](https://github.com/yanatan16/zuul-demo/tree/master)
+[`travis-test` branch](https://github.com/yanatan16/zuul-demo/tree/travis-test)
 
-[diff with `cloud-tests`](https://github.com/yanatan16/zuul-demo/compare/cloud-tests...master)
+[diff with `cloud-tests`](https://github.com/yanatan16/zuul-demo/compare/cloud-tests...travis-test)
 
 - [.travis.yml](.travis.yml)
 - [package.json](package.json)
