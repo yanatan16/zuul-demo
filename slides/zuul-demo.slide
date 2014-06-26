@@ -62,7 +62,9 @@ Run the cloud browser tests!
 
 And ensure your `npm test` command is right:
 
-.code ../package.json /scripts/,/\}/
+.code ../package.json /test/
+
+* Trigger Travis-CI
 
 And just push some code!
 
